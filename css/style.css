@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin\+Slab:100");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+  font-family: 'Josefin Slab', serif;
+  font-size: 16;
+}
+body {
+  background: #555;
+}
+h1 {
+  color: rgba(255,255,255,0.9);
+  padding: 4rem 0;
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  background: rgba(0,0,0,0.3);
+}
+main {
+  position: relative;
+  width: 100%;
+  min-height: 80%;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+@media screen and (min-width: 800px) {
+  main {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+.icon {
+  width: 120px;
+  height: 120px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 120px;
+          flex: 1 0 120px;
+  cursor: pointer;
+}
+.icon:hover svg {
+  width: 60%;
+  height: 60%;
+  left: -10%;
+  top: 20%;
+}
+.icon:hover path {
+  fill: rgba(255,255,255,0.9);
+}
+.icon:hover .shadow {
+  fill: rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+          box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+svg {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  left: 30%;
+  top: 30%;
+  overflow: visible;
+  position: relative;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+svg path {
+  fill: rgba(221,238,221,0.4);
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+.shadow {
+  fill: transparent;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-transform: scale(1.2, 1.2) perspective(300px) rotateX(250deg) skew(-65deg);
+          transform: scale(1.2, 1.2) perspective(300px) rotateX(250deg) skew(-65deg);
+}
